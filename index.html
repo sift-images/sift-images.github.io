@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Processing.js Test - SIFT</title>
-        <script src="processing.js"></script>
+	<style>
+	 body {
+	     font-family: Arial, sans-serif;
+	     padding-left: 20px;
+	     padding-right:20px
+	 }
+	 h1 {
+	     font-size: 60px;
+	 }
+	</style>
+	<title>SIFT IMAGES</title>
+	<script src="processing.js"></script>
     </head>
     <body>
-        <h1>SIFT Processing.js</h1>
-        <canvas data-processing-sources="combinatrix_color_pde.pde"></canvas>
+	<div class="container" style="padding-bottom: 30px;">
+	    <div style="float:left; margin:20px; width: 50%;">
+		<h1>SIFT</h1>
+		<div class="container">
+		    <canvas data-processing-sources="combinatrix_color_pde.pde"></canvas>
+		</div>
+	    </div>
+	    <div style="float:right; margin:20px; width: 300px; padding-top:80px">
+		<a class="twitter-timeline" data-height="600" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/SIFT_IMAGES">Tweets by SIFT_IMAGES</a>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	    </div>
+
+	</div>
+	<div style="margin-top:190px; position:absolute; right:0; left:20px; bottom:0;">
+	    <p>SIFT is a visual experiment. It has two parts:</p>
+	    <ol>
+		<li>SIFT systematically generates every possible image</li>
+		<li>A neural network evaluates each image to determine if it is interesting or not. Candidate images are tweeted.</li>
+	    </ol>
+	    <p>Using brute-force combinatorics, how many images would one have to generate to find a simulated photograph?</p>
+	</div>
     </body>
 </html>

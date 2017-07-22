@@ -60,7 +60,7 @@ int padLeft;
 
 void setup() {
     frameRate(60);
-    size(600, 600);
+    size(512, 512);
     pix = height / rows / subSize;
     noStroke();
     for (int x=0;x<cols*depth*3;x++) {
@@ -143,7 +143,7 @@ void draw() {
     
     for (int x=0;x<depth*cols*3;x++) {
 	for (int y=0;y<depth*rows;y++) {
-	    image[x][y] = (image[x][y] + random(0,2)) % 70;
+	    image[x][y] = (image[x][y] + random(0,2)) % 38 - 1.05;
 	    //println(x,y,"updated in image to: ",image[x][y]);
 	}
     }
