@@ -4,37 +4,57 @@
 	<style>
 	 body {
 	     font-family: Arial, sans-serif;
-	     padding-left: 20px;
-	     padding-right:20px
-	 }
-	 h1 {
-	     font-size: 60px;
+	     margin: 10px;
+	     padding: 10px;
 	 }
 	</style>
 	<title>SIFT IMAGES</title>
+
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+	
 	<script src="processing.js"></script>
     </head>
-    <body>
-	<div class="container" style="padding-bottom: 30px;">
-	    <div style="float:left; margin:20px; width: 50%;">
-		<h1>SIFT</h1>
-		<div class="container">
-		    <canvas data-processing-sources="combinatrix_color_pde.pde"></canvas>
-		</div>
-	    </div>
-	    <div style="float:right; margin:20px; width: 300px; padding-top:80px">
-		<a class="twitter-timeline" data-height="600" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/SIFT_IMAGES">Tweets by SIFT_IMAGES</a>
-		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-	    </div>
 
-	</div>
-	<div style="margin-top:190px; position:absolute; right:0; left:20px; bottom:0;">
-	    <p>SIFT is a visual experiment. It has two parts:</p>
-	    <ol>
-		<li>SIFT systematically generates every possible image</li>
-		<li>A neural network evaluates each image to determine if it is interesting or not. Candidate images are tweeted.</li>
-	    </ol>
-	    <p>Using brute-force combinatorics, how many images would one have to generate to find a simulated photograph?</p>
-	</div>
+    <body>
+      <div id="layout" class="pure-g">
+
+	  <div class="pure-u-1 pure-u-md-3-5">
+            <h1 style="text-align: center;">SIFT</h1>
+
+            <canvas data-processing-sources="combinatrix_color_pde.pde" style="display: block; margin: auto;"></canvas>
+
+	  </div>
+  
+
+	  <div class="pure-u-1 pure-u-md-2-5">
+	    <div style="float: center; margin: auto; width: 300px">
+	      <a class="twitter-timeline" data-height="550" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/SIFT_IMAGES">Recent images</a>
+              <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	    </div>
+	  </div>
+
+      </div>
+
+      <div id="footer" class="pure-g">
+
+	<div class="pure-u-1-5"></div>
+	
+	<div class="pure-u-3-5" style="postition: absolute; bottom: 0;">
+	  <div style="padding: 30px">
+	    <h3>SIFT is a visual experiment. It has two parts:</h3>
+            <ol>
+	      <li>SIFT systematically generates every possible image</li>
+	      <li>A neural network evaluates each image to determine if it is interesting or not. Candidate images are tweeted and stored to file.</li>
+            </ol>
+	    <p>The question is:</p>
+            <p><h3>Using brute-force combinatorics, what is the proportion of meaningful images among possible images?</h3></p>
+	    <p>As of December, 2017, SIFT has evaluated over 1.2e10 images; many have been interesting but none have passed the final test of "appearing to be a photograph" to a human.</p>
+	    <p style="text-align: center"><a href="http://www.github.com/notsambeck/sift2">github</a> <a href="https://www.twitter.com/sift_images">twitter</a> <a href="https://vimeo.com/197134906">commercial</a> <a href="https://vimeo.com/196373453">buisness opportunity</a></p>
+	  </div>
+	<div class="pure-u-1-5"></div>
+	
+      </div>
     </body>
 </html>

@@ -9,7 +9,6 @@ int cols = 2;
 //color rendering:
 
 float[][] image = new float[depth*cols*3][depth*rows];
-int pct = 60;
 
 int pix;
 int add = 40;
@@ -59,8 +58,8 @@ int padLeft;
 
 
 void setup() {
-    frameRate(60);
-    size(512, 512);
+    frameRate(20);
+    size(400, 400);
     pix = height / rows / subSize;
     noStroke();
     for (int x=0;x<cols*depth*3;x++) {
@@ -99,7 +98,7 @@ void draw() {
 		flipX = 1;
 		xShift = col*pix*subSize;
 	    }
-		
+	
 	    
 	    float tempBlockR[][] = new float[depth][depth];
 	    float tempBlockG[][] = new float[depth][depth];
@@ -108,7 +107,6 @@ void draw() {
 	    float g[][] = new float[subSize][subSize];
 	    float b[][] = new float[subSize][subSize];
 
-      
       
 	    for (int i=0;i<depth;i++) {
 		for (int j=0;j<depth;j++) {
